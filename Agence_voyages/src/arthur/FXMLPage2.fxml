@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ProgressIndicator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="Table" prefHeight="562.0" prefWidth="1000.0" style="-fx-background-color: #AAD5F4;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="arthur.FXMLPage2Controller">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="1000.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo6.jpg" />
+         </image>
+      </ImageView>
+      <Button fx:id="suivant" layoutX="430.0" layoutY="502.0" mnemonicParsing="false" onAction="#handleButtonAction1" prefHeight="46.0" prefWidth="141.0" style="-fx-background-color: #E45652;" text="JE RESERVE" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="11.0" />
+         </font></Button>
+      <Button fx:id="Retour1" layoutX="14.0" layoutY="513.0" mnemonicParsing="false" onAction="#handleButtonAction1" style="-fx-background-color: #E45652;" text="RETOUR" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <ImageView fitHeight="475.0" fitWidth="1000.0" layoutY="75.0" opacity="0.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@siege.jpg" />
+         </image>
+      </ImageView>
+      <TableView fx:id="tableview" layoutY="49.0" opacity="0.78" prefHeight="428.0" prefWidth="1000.0" style="-fx-background-color: whiite;" tableMenuButtonVisible="true">
+        <columns>
+          <TableColumn fx:id="tabnvol" prefWidth="55.0" sortable="false" text="N°Vol" />
+          <TableColumn fx:id="tabid" prefWidth="55.0" text="Id" />
+            <TableColumn fx:id="tabVilleD" prefWidth="129.0" text="Ville Depart" />
+            <TableColumn fx:id="tabDateD" prefWidth="109.0" text="Date Depart" />
+            <TableColumn fx:id="tabheureD" prefWidth="87.0" text="Heure Depart" />
+            <TableColumn fx:id="TabVilleA" prefWidth="129.0" text="Ville Arrivee" />
+            <TableColumn fx:id="tabDateA" prefWidth="132.0" text="Date Arrivee" />
+            <TableColumn fx:id="tabheureA" prefWidth="100.0" text="Heure Arrivee" />
+            <TableColumn fx:id="tabavion1" prefWidth="107.0" text="Avion" />
+            <TableColumn fx:id="tabprix" prefWidth="96.0" text="Prix" />
+        </columns>
+      </TableView>
+      <AnchorPane fx:id="reservation" layoutX="11.0" layoutY="54.0" prefHeight="537.0" prefWidth="588.0" visible="false">
+         <children>
+            <Label fx:id="lblnom" layoutX="16.0" layoutY="27.0" prefHeight="17.0" prefWidth="41.0" text="Nom" textFill="#0a0a0a" />
+            <Label fx:id="lblprenom" layoutX="16.0" layoutY="83.0" text="Prenom" />
+            <Label fx:id="lblpasseport" layoutX="1.0" layoutY="198.0" text="Numero Passeport" />
+            <Label fx:id="lblage" layoutX="23.0" layoutY="145.0" prefHeight="17.0" prefWidth="27.0" text="Age" />
+            <TextField fx:id="txtnom" layoutX="108.0" layoutY="23.0" />
+            <TextField fx:id="txtprenom" layoutX="108.0" layoutY="79.0" />
+            <TextField fx:id="txtage" layoutX="108.0" layoutY="141.0" />
+            <TextField fx:id="txtpassword" layoutX="108.0" layoutY="194.0" />
+            <Button fx:id="enregistrer" layoutX="289.0" layoutY="465.0" mnemonicParsing="false" onAction="#handleButtonAction1" style="-fx-background-color: #E45652;" text="ENREGISTRER" textFill="WHITE" />
+            <Label fx:id="lblmessage1" layoutX="111.0" layoutY="254.0" text="Operation effectué avec succès" textFill="#19df13" visible="false" />
+            <Label fx:id="lblmessage2" layoutX="118.0" layoutY="288.0" text="Attention Champ obligatoires" textFill="#f30d0d" visible="false" />
+            <Button fx:id="Retour2" layoutX="7.0" layoutY="453.0" mnemonicParsing="false" onAction="#handleButtonAction1" style="-fx-background-color: #E45652;" text="RETOUR" textFill="WHITE" />
+            <Label fx:id="Lfailed" layoutX="310.0" layoutY="95.0" onDragDetected="#handleButtonAction1" text="Echec de l'operation car champ Obligatoire" textFill="#ff0202" visible="false" />
+            <Label fx:id="lblvilledepart" layoutX="7.0" layoutY="236.0" text="Vile Depart" />
+            <Label fx:id="lblheure_depart" layoutX="7.0" layoutY="270.0" text="Heure Départ" />
+            <Label fx:id="lblvillearrivee" layoutX="5.0" layoutY="339.0" text="Ville Arrivée" />
+            <Label fx:id="lblheure_arrivee" layoutX="7.0" layoutY="375.0" text="Heure arrivée" />
+            <Label fx:id="valeur_v_depart" layoutX="140.0" layoutY="236.0" text="Label" textFill="WHITE" />
+            <Label fx:id="valeur_h_depart" layoutX="140.0" layoutY="270.0" text="Label" textFill="WHITE" />
+            <Label fx:id="valeur_v_arrivee" layoutX="140.0" layoutY="339.0" text="Label" textFill="WHITE" />
+            <Label fx:id="valeur_h_arrivee" layoutX="140.0" layoutY="375.0" text="Label" textFill="WHITE" />
+            <Label layoutX="5.0" layoutY="304.0" text="Date Départ" />
+            <Label layoutX="10.0" layoutY="419.0" text="Date Arrivée" />
+            <Label fx:id="valeur_d_depart" layoutX="140.0" layoutY="304.0" text="Label" textFill="WHITE" />
+            <Label fx:id="valeur_d_arrivee" layoutX="140.0" layoutY="419.0" text="Label" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <TextField fx:id="search" layoutX="114.0" layoutY="14.0" onKeyReleased="#search" prefHeight="25.0" prefWidth="133.0" promptText="ville depart">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="search1" layoutX="422.0" layoutY="14.0" onKeyReleased="#search" prefHeight="25.0" prefWidth="141.0" promptText="ville arrivée">
+         <font>
+            <Font name="System Bold Italic" size="12.0" />
+         </font>
+      </TextField>
+      <Label fx:id="message" layoutX="681.0" layoutY="18.0" onDragDetected="#handleButtonAction1" text="Attention veuillez selectionner un vol" textFill="#0aff00" visible="false" />
+      <ProgressIndicator fx:id="load" layoutX="922.0" layoutY="503.0" prefHeight="46.0" prefWidth="42.0" visible="false" />
+   </children>
+</AnchorPane>

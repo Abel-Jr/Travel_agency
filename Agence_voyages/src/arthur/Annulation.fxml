@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane id="AnchorPane" prefHeight="269.0" prefWidth="418.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="arthur.AnnulationController">
+   <children>
+      <ImageView fitHeight="315.0" fitWidth="472.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@hotesse.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="118.0" fitWidth="182.0" layoutX="285.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@logo4.png" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="60.0" fitWidth="31.0" layoutX="14.0" layoutY="146.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@warning_icon_24.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="Lmess" layoutX="14.0" layoutY="69.0" text="Entrez votre numero de reservation" textFill="WHITE">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font></Label>
+      <TextField fx:id="n_reser" layoutX="35.0" layoutY="105.0" promptText="N°Reservation" style="-fx-background-color: white; -fx-border-color: white;">
+         <font>
+            <Font name="Arial Black" size="12.0" />
+         </font></TextField>
+      <Button fx:id="continuer" layoutX="338.0" layoutY="140.0" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: #E45652;" text="Continuer" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Button fx:id="retour" layoutX="347.0" layoutY="209.0" mnemonicParsing="false" onAction="#handleButtonAction" style="-fx-background-color: #E45652;" text="Retour" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Button>
+      <Label fx:id="Lmessage" layoutX="45.0" layoutY="152.0" text="operation est irreversible" textFill="RED">
+         <font>
+            <Font name="System Bold Italic" size="13.0" />
+         </font></Label>
+      <AnchorPane fx:id="anchor" layoutX="-7.0" layoutY="-6.0" prefHeight="315.0" prefWidth="464.0" style="-fx-background-color: white;" visible="false">
+         <children>
+            <Button fx:id="ok" layoutX="187.0" layoutY="140.0" mnemonicParsing="false" onAction="#handleButtonAction" prefHeight="35.0" prefWidth="91.0" style="-fx-background-color: #D33737; -fx-border-color: transparent;" text="SORTIR" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="17.0" />
+               </font></Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

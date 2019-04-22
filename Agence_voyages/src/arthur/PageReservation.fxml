@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane id="AnchorPane" prefHeight="599.0" prefWidth="1227.0" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="arthur.PageReservationController">
+   <children>
+      <Button fx:id="actualiser" layoutX="542.0" layoutY="560.0" mnemonicParsing="false" onAction="#Actualiser" prefHeight="25.0" prefWidth="144.0" text="Actualiser" />
+      <Label fx:id="lbldisplay" alignment="TOP_LEFT" layoutX="66.0" layoutY="64.0" onDragDetected="#Actualiser" prefHeight="457.0" prefWidth="870.0" />
+   </children>
+</AnchorPane>
